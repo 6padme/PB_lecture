@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="로또 당첨 확률을 수학적으로 분석합니다. 1등부터 5등까지의 정확한 확률과 기댓값을 알아보세요.">
+    <title>로또 당첨 확률 이해하기 | 로또인사이트</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">🎱 로또<span>인사이트</span></a>
+            <nav>
+                <a href="../index.html">홈</a>
+                <a href="lotto-history.html">로또 역사</a>
+                <a href="lotto-statistics.html">번호 통계</a>
+                <a href="lotto-probability.html">당첨 확률</a>
+                <a href="../about.html">소개</a>
+            </nav>
+        </div>
+    </header>
+
+    <button id="theme-toggle" aria-label="다크모드 전환">🌙</button>
+
+    <div class="page-wrapper">
+        <div class="breadcrumb">
+            <a href="../index.html">홈</a> › <span>당첨 확률 이해하기</span>
+        </div>
+
+        <div class="article-layout">
+            <article>
+                <header class="article-header">
+                    <span class="article-tag">확률</span>
+                    <h1 class="article-title">로또 당첨 확률, 수학으로 제대로 이해하기</h1>
+                    <div class="article-meta">2025년 4월 7일 · 읽는 시간 약 7분</div>
+                </header>
+
+                <div class="article-body">
+                    <p>
+                        로또 1등에 당첨될 확률은 얼마나 될까요? "벼락을 맞을 확률보다 낮다"는 말을 들어본 적이 있을 것입니다. 이번 글에서는 수학적 조합론을 바탕으로 로또 각 등수의 정확한 당첨 확률을 계산하고, 이를 일상적인 사건과 비교해 직관적으로 이해할 수 있도록 설명합니다.
+                    </p>
+
+                    <h2>조합(Combination)이란?</h2>
+                    <p>
+                        로또는 1~45 중에서 순서 없이 6개를 선택하는 게임입니다. 이처럼 순서에 상관없이 항목을 선택하는 경우의 수를 <strong>조합(Combination)</strong>이라고 합니다.
+                    </p>
+                    <p>
+                        45개 중 6개를 선택하는 경우의 수는 다음과 같이 계산합니다:
+                    </p>
+                    <div class="highlight-box">
+                        <strong>C(45, 6) = 45! / (6! × 39!) = <span style="font-size:1.2em">8,145,060</span></strong><br>
+                        즉, 약 814만 5,060가지 조합이 가능합니다.
+                    </div>
+                    <p>
+                        이 중 정확히 1가지만 1등에 해당하므로, 1등 당첨 확률은 1/8,145,060 ≈ 0.0000123%입니다.
+                    </p>
+
+                    <h2>등수별 당첨 확률 완전 정리</h2>
+                    <table>
+                        <thead>
+                            <tr><th>등수</th><th>조건</th><th>경우의 수</th><th>확률</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1등</td><td>6개 번호 모두 일치</td><td>1</td><td>약 1/814만</td></tr>
+                            <tr><td>2등</td><td>5개 일치 + 보너스 번호 일치</td><td>6</td><td>약 1/135만</td></tr>
+                            <tr><td>3등</td><td>5개 번호 일치</td><td>216</td><td>약 1/3만 5천</td></tr>
+                            <tr><td>4등</td><td>4개 번호 일치</td><td>8,855</td><td>약 1/733</td></tr>
+                            <tr><td>5등</td><td>3개 번호 일치</td><td>182,780</td><td>약 1/45</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>1등 확률을 일상에 비교하면?</h2>
+                    <p>
+                        1/814만이라는 숫자는 추상적으로 느껴집니다. 이를 일상적인 사건과 비교해 보겠습니다.
+                    </p>
+                    <ul>
+                        <li>🌩️ 평생 벼락을 맞을 확률: 약 1/15,000 → <strong>로또 1등이 약 540배 더 희박</strong></li>
+                        <li>✈️ 비행기 사고로 사망할 확률: 약 1/20,000 → <strong>로또 1등이 약 400배 더 희박</strong></li>
+                        <li>🎯 동전 23번 연속 앞면: 약 1/840만 → <strong>로또 1등과 유사한 수준</strong></li>
+                        <li>👥 같은 날 쌍둥이 출산 후 둘 다 당일 사고 확률보다 낮음</li>
+                    </ul>
+
+                    <h2>기댓값(Expected Value) 계산</h2>
+                    <p>
+                        로또 1장(1,000원)의 기댓값은 얼마일까요? 기댓값은 각 등수의 당첨금에 해당 확률을 곱한 뒤 모두 더한 값입니다.
+                    </p>
+                    <p>
+                        판매금액의 50%가 당첨금으로 배분되고, 1등 당첨금이 약 20억 원이라고 가정했을 때:
+                    </p>
+                    <table>
+                        <thead>
+                            <tr><th>등수</th><th>평균 당첨금(추정)</th><th>확률</th><th>기여 기댓값</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1등</td><td>약 20억 원</td><td>1/8,145,060</td><td>약 245원</td></tr>
+                            <tr><td>2등</td><td>약 5,000만 원</td><td>6/8,145,060</td><td>약 37원</td></tr>
+                            <tr><td>3등</td><td>약 150만 원</td><td>216/8,145,060</td><td>약 40원</td></tr>
+                            <tr><td>4등</td><td>5만 원(고정)</td><td>8,855/8,145,060</td><td>약 54원</td></tr>
+                            <tr><td>5등</td><td>5,000원(고정)</td><td>182,780/8,145,060</td><td>약 112원</td></tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        합산하면 1장당 기댓값은 약 <strong>488원</strong>으로, 구매 금액 1,000원의 약 49%입니다. 즉, 장기적으로 로또를 계속 구매하면 투입 금액의 약 절반만 돌려받는 구조입니다. 이는 카지노나 다른 도박과 비슷하거나 불리한 수준입니다.
+                    </p>
+
+                    <div class="highlight-box">
+                        💡 <strong>합리적 참여를 위한 조언</strong><br>
+                        로또는 '기부에 가까운 작은 꿈'으로 접근하는 것이 좋습니다. 매주 1~2장을 즐거움으로 구매하되, 당첨을 기대하고 생활비를 투자하는 것은 피하세요.
+                    </div>
+
+                    <h2>당첨 확률을 높이는 방법은 없나요?</h2>
+                    <p>
+                        수학적으로 특정 번호 조합이 다른 조합보다 더 나올 확률은 없습니다. 그러나 다음 전략으로 <strong>당첨금의 기댓값</strong>을 높일 수는 있습니다.
+                    </p>
+                    <ul>
+                        <li><strong>덜 선택되는 번호 조합 사용:</strong> 많은 사람이 선택하는 번호(생일, 기념일 등)를 피하면, 같은 확률로 당첨됐을 때 당첨금을 혼자 받을 가능성이 높아집니다.</li>
+                        <li><strong>자동 번호 이용:</strong> 컴퓨터가 무작위로 생성하므로 특정 번호에 쏠리지 않아 공동 당첨 가능성이 낮아집니다.</li>
+                        <li><strong>이월 회차 공략:</strong> 1등 당첨자가 없어 당첨금이 이월된 회차에는 기댓값이 올라갑니다.</li>
+                    </ul>
+                    <p>단, 위 방법은 당첨 <em>확률</em>을 높이는 것이 아니라 당첨 시 받는 <em>금액</em>의 기댓값을 소폭 개선하는 것임을 명심하세요.</p>
+
+                    <h2>세금은 얼마나 내나요?</h2>
+                    <p>
+                        로또 당첨금은 소득세 과세 대상입니다. 당첨금 규모에 따라 세율이 달라집니다.
+                    </p>
+                    <table>
+                        <thead>
+                            <tr><th>당첨금 규모</th><th>세율</th><th>실수령 비율</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>5만 원 이하(5등)</td><td>비과세</td><td>100%</td></tr>
+                            <tr><td>5만 원 초과 ~ 3억 원 이하</td><td>22% (소득세 20% + 지방세 2%)</td><td>78%</td></tr>
+                            <tr><td>3억 원 초과</td><td>33% (소득세 30% + 지방세 3%)</td><td>67%</td></tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        예를 들어, 1등 당첨금이 20억 원이라면 세금(약 6억 원)을 제외한 실수령액은 약 13~14억 원 수준이 됩니다.
+                    </p>
+
+                    <h2>마무리</h2>
+                    <p>
+                        로또 당첨 확률은 수학적으로 매우 낮지만, 그렇기에 소액으로 큰 꿈을 꿀 수 있는 매력이 있습니다. 확률을 정확히 이해하고 건전하게 즐기는 것이 가장 현명한 로또 참여 방식입니다. 한 주에 1~2장, 여유 있는 범위 내에서의 구매는 즐거운 기대감을 선사합니다.
+                    </p>
+                </div>
+            </article>
+
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3>관련 글</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="lotto-history.html">한국 로또의 역사</a></li>
+                        <li><a href="lotto-statistics.html">번호별 출현 빈도 분석</a></li>
+                        <li><a href="../index.html">로또 번호 생성기</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h3>확률 핵심 요약</h3>
+                    <ul class="sidebar-list">
+                        <li>1등: 약 1/814만</li>
+                        <li>2등: 약 1/135만</li>
+                        <li>3등: 약 1/3.5만</li>
+                        <li>4등: 약 1/733</li>
+                        <li>5등: 약 1/45</li>
+                        <li>1장 기댓값: 약 488원</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="../about.html">소개</a>
+                <a href="../privacy.html">개인정보처리방침</a>
+                <a href="../contact.html">제휴 문의</a>
+            </div>
+            <p>© 2025 로또인사이트. 본 사이트는 정보 제공 목적으로 운영되며, 사행행위를 조장하지 않습니다.</p>
+        </div>
+    </footer>
+    <script src="../main.js"></script>
+</body>
+</html>

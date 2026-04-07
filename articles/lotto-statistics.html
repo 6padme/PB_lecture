@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="로또 번호별 출현 빈도와 통계 분석 — 자주 나오는 번호, 잘 안 나오는 번호, 홀짝 비율 등을 데이터로 분석합니다.">
+    <title>로또 번호 통계 분석 | 로또인사이트</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-inner">
+            <a href="../index.html" class="logo">🎱 로또<span>인사이트</span></a>
+            <nav>
+                <a href="../index.html">홈</a>
+                <a href="lotto-history.html">로또 역사</a>
+                <a href="lotto-statistics.html">번호 통계</a>
+                <a href="lotto-probability.html">당첨 확률</a>
+                <a href="../about.html">소개</a>
+            </nav>
+        </div>
+    </header>
+
+    <button id="theme-toggle" aria-label="다크모드 전환">🌙</button>
+
+    <div class="page-wrapper">
+        <div class="breadcrumb">
+            <a href="../index.html">홈</a> › <span>번호 통계 분석</span>
+        </div>
+
+        <div class="article-layout">
+            <article>
+                <header class="article-header">
+                    <span class="article-tag">통계</span>
+                    <h1 class="article-title">로또 번호별 출현 빈도 완전 분석</h1>
+                    <div class="article-meta">2025년 4월 7일 · 읽는 시간 약 6분</div>
+                </header>
+
+                <div class="article-body">
+                    <p>
+                        "어떤 번호가 자주 나올까?" 로또를 구매하는 사람이라면 누구나 한 번쯤 품어봤을 질문입니다. 수학적으로는 모든 번호가 동일한 확률을 갖지만, 실제 역대 추첨 데이터를 분석하면 단기·중기적으로 출현 빈도의 차이가 발생합니다. 이번 글에서는 로또 통계를 읽는 올바른 방법과 주요 패턴을 살펴봅니다.
+                    </p>
+
+                    <h2>통계를 보기 전에 — 독립 시행의 원칙</h2>
+                    <p>
+                        로또 추첨은 매회 완전히 독립적으로 이루어집니다. 즉, 지난 회차에서 특정 번호가 나왔다고 해서 다음 회차에 그 번호가 덜 나오거나 더 나올 이유는 없습니다. 이를 <strong>독립 시행(Independent Trial)</strong>이라 합니다.
+                    </p>
+                    <p>
+                        따라서 통계 데이터는 "이 번호가 앞으로 더 나올 것"을 보장하지 않습니다. 다만 추첨기의 물리적 특성이나 미세한 편향이 장기 데이터에 반영될 수 있다는 주장도 있어, 참고 자료로 활용하는 분들이 많습니다.
+                    </p>
+
+                    <div class="highlight-box">
+                        ⚠️ <strong>통계 활용 시 주의</strong><br>
+                        과거 출현 빈도가 미래 당첨을 보장하지 않습니다. 통계는 재미와 참고 목적으로만 활용하세요.
+                    </div>
+
+                    <h2>번호대별 특성</h2>
+                    <p>로또 번호 1~45는 크게 다섯 구간으로 나눌 수 있으며, 각 구간의 특성을 이해하면 번호 선택에 도움이 됩니다.</p>
+
+                    <table>
+                        <thead>
+                            <tr><th>구간</th><th>번호 범위</th><th>볼 색상</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1구간</td><td>1 ~ 10</td><td>노란색</td><td>생일·기념일과 겹쳐 수동 선택 집중</td></tr>
+                            <tr><td>2구간</td><td>11 ~ 20</td><td>파란색</td><td>비교적 고른 출현율</td></tr>
+                            <tr><td>3구간</td><td>21 ~ 30</td><td>빨간색</td><td>중간 번호, 안정적 출현</td></tr>
+                            <tr><td>4구간</td><td>31 ~ 40</td><td>회색</td><td>상대적으로 덜 선택되는 구간</td></tr>
+                            <tr><td>5구간</td><td>41 ~ 45</td><td>초록색</td><td>번호 수가 적어 출현 빈도 낮음</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>홀수 vs 짝수 비율</h2>
+                    <p>
+                        역대 당첨 번호의 홀짝 비율을 분석하면, 6개 번호가 모두 홀수이거나 모두 짝수인 경우는 전체의 약 2~3%에 불과합니다. 가장 많이 출현하는 조합은 <strong>홀수 3개 + 짝수 3개</strong> 또는 <strong>홀수 4개 + 짝수 2개</strong> 패턴입니다.
+                    </p>
+
+                    <table>
+                        <thead>
+                            <tr><th>홀수 개수</th><th>짝수 개수</th><th>이론적 출현 비율</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>3</td><td>3</td><td>약 33%</td></tr>
+                            <tr><td>4</td><td>2</td><td>약 28%</td></tr>
+                            <tr><td>2</td><td>4</td><td>약 23%</td></tr>
+                            <tr><td>5</td><td>1</td><td>약 10%</td></tr>
+                            <tr><td>1</td><td>5</td><td>약 5%</td></tr>
+                            <tr><td>6</td><td>0</td><td>약 1%</td></tr>
+                            <tr><td>0</td><td>6</td><td>약 1%</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>연속 번호의 출현</h2>
+                    <p>
+                        많은 사람들이 연속된 번호(예: 7, 8, 9)는 잘 안 나온다고 생각합니다. 그러나 실제 데이터를 보면 <strong>2개의 연속 번호</strong>가 포함된 당첨 조합은 전체의 약 60% 이상을 차지합니다. 즉, 연속 번호 2개 이상이 포함되는 것이 오히려 일반적입니다.
+                    </p>
+
+                    <h2>번호 합계의 분포</h2>
+                    <p>
+                        6개 번호의 합계는 이론상 21(1+2+3+4+5+6)에서 255(40+41+42+43+44+45)까지 가능합니다. 그러나 실제 당첨 번호의 합계는 <strong>100~180 구간</strong>에 약 70% 이상이 집중됩니다. 극단적으로 낮거나 높은 합계는 출현 확률이 매우 낮습니다.
+                    </p>
+
+                    <table>
+                        <thead>
+                            <tr><th>합계 구간</th><th>출현 비율(추정)</th><th>특징</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>21 ~ 80</td><td>약 5%</td><td>낮은 번호 집중, 드묾</td></tr>
+                            <tr><td>81 ~ 130</td><td>약 30%</td><td>중저 범위</td></tr>
+                            <tr><td>131 ~ 180</td><td>약 40%</td><td>가장 빈번한 구간</td></tr>
+                            <tr><td>181 ~ 230</td><td>약 20%</td><td>중고 범위</td></tr>
+                            <tr><td>231 ~ 255</td><td>약 5%</td><td>높은 번호 집중, 드묾</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h2>자동 선택 vs 수동 선택</h2>
+                    <p>
+                        로또 구매자의 약 70~80%가 자동 선택(컴퓨터 랜덤)을 이용합니다. 이는 역대 1등 당첨자 중 대다수가 자동 선택으로 당첨됐다는 통계와 일치합니다. 수동으로 선택할 경우 생일이나 기념일 등 특정 번호에 집중되는 경향이 있어, 같은 번호 조합으로 구매한 사람이 많아지면 1인당 당첨금이 줄어들 수 있습니다.
+                    </p>
+
+                    <h2>통계를 현명하게 활용하는 법</h2>
+                    <ul>
+                        <li>홀짝 비율을 3:3 또는 4:2로 맞춰보세요.</li>
+                        <li>번호 합계를 100~180 범위 내로 설정해 보세요.</li>
+                        <li>전 구간(1~45)에 걸쳐 고루 분포한 번호를 선택해 보세요.</li>
+                        <li>모든 번호를 같은 구간에서 선택하는 것은 확률상 비효율적입니다.</li>
+                        <li>어떤 전략도 당첨을 보장하지 않으므로, 즐거움을 위해 가볍게 참고하세요.</li>
+                    </ul>
+
+                    <h2>결론</h2>
+                    <p>
+                        로또 통계는 흥미로운 데이터 분석의 세계를 열어주지만, 어떤 전략도 당첨을 보장하지 않습니다. 로또는 어디까지나 운에 의존하는 게임이며, 예산 범위 내에서 즐기는 것이 가장 현명한 참여 방식입니다. 통계는 참고 자료로만 활용하고, 무리한 구매는 삼가는 것을 권장합니다.
+                    </p>
+                </div>
+            </article>
+
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3>관련 글</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="lotto-history.html">한국 로또의 역사</a></li>
+                        <li><a href="lotto-probability.html">당첨 확률 완전 이해</a></li>
+                        <li><a href="../index.html">로또 번호 생성기</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h3>통계 핵심 요약</h3>
+                    <ul class="sidebar-list">
+                        <li>홀짝 3:3 조합이 가장 빈번</li>
+                        <li>번호 합계 100~180이 최다</li>
+                        <li>연속 번호 2개 이상이 일반적</li>
+                        <li>자동선택 당첨 비율 더 높음</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="../about.html">소개</a>
+                <a href="../privacy.html">개인정보처리방침</a>
+                <a href="../contact.html">제휴 문의</a>
+            </div>
+            <p>© 2025 로또인사이트. 본 사이트는 정보 제공 목적으로 운영되며, 사행행위를 조장하지 않습니다.</p>
+        </div>
+    </footer>
+    <script src="../main.js"></script>
+</body>
+</html>

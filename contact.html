@@ -3,136 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제휴 문의 | Lotto Number Generator</title>
+    <meta name="description" content="로또인사이트 제휴 문의 — 광고, 협업, 기타 비즈니스 문의를 남겨주세요.">
+    <title>제휴 문의 | 로또인사이트</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .form-card {
-            text-align: left;
-            width: 100%;
-            max-width: 480px;
-        }
-
-        .form-card h1 {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 8px;
-        }
-
-        .form-card p.subtitle {
-            text-align: center;
-            color: #888;
-            margin-bottom: 28px;
-            font-size: 0.95em;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 18px;
-        }
-
-        .form-group label {
-            font-size: 0.9em;
-            font-weight: bold;
-            margin-bottom: 6px;
-            color: var(--main-color);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            padding: 12px 14px;
-            border: 1.5px solid #ccc;
-            border-radius: 8px;
-            font-size: 1em;
-            font-family: Arial, sans-serif;
-            background-color: var(--container-bg);
-            color: var(--main-color);
-            transition: border-color 0.2s, background-color 0.3s;
-            resize: vertical;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 10px;
-            background-color: var(--primary-color);
-            color: #fff;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .submit-btn:hover {
-            background-color: #45a049;
-            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
-        }
-
-        .back-link {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-size: 0.95em;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        [data-theme="dark"] .form-group input,
-        [data-theme="dark"] .form-group textarea {
-            border-color: #444;
-        }
-    </style>
 </head>
 <body>
-    <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-    <div class="container form-card">
-        <h1>제휴 문의</h1>
-        <p class="subtitle">비즈니스 제휴 및 협업 문의를 남겨주세요.</p>
-        <form action="https://formspree.io/f/xgopddan" method="POST">
-            <div class="form-group">
-                <label for="name">이름 / 회사명</label>
-                <input type="text" id="name" name="name" placeholder="홍길동 / (주)회사명" required>
-            </div>
-            <div class="form-group">
-                <label for="email">이메일</label>
-                <input type="email" id="email" name="email" placeholder="example@email.com" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">문의 유형</label>
-                <input type="text" id="subject" name="subject" placeholder="광고, 협업, 기타...">
-            </div>
-            <div class="form-group">
-                <label for="message">문의 내용</label>
-                <textarea id="message" name="message" rows="5" placeholder="문의 내용을 자세히 적어주세요." required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">문의 보내기</button>
-        </form>
-        <a href="index.html" class="back-link">← 메인으로 돌아가기</a>
-    </div>
-    <script>
-        const themeToggle = document.querySelector('#theme-toggle');
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+    <header>
+        <div class="nav-inner">
+            <a href="index.html" class="logo">🎱 로또<span>인사이트</span></a>
+            <nav>
+                <a href="index.html">홈</a>
+                <a href="articles/lotto-history.html">로또 역사</a>
+                <a href="articles/lotto-statistics.html">번호 통계</a>
+                <a href="articles/lotto-probability.html">당첨 확률</a>
+                <a href="about.html">소개</a>
+            </nav>
+        </div>
+    </header>
 
-        themeToggle.addEventListener('click', () => {
-            const current = document.documentElement.getAttribute('data-theme');
-            const next = current === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
-            themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
-            localStorage.setItem('theme', next);
-        });
-    </script>
+    <button id="theme-toggle" aria-label="다크모드 전환">🌙</button>
+
+    <div class="page-wrapper">
+        <div class="breadcrumb">
+            <a href="index.html">홈</a> › <span>제휴 문의</span>
+        </div>
+
+        <div class="static-page" style="max-width:800px">
+            <h1>제휴 문의</h1>
+            <p class="lead">비즈니스 협업, 광고 문의, 기타 제안을 남겨주시면 빠르게 답변드리겠습니다.</p>
+
+            <div class="contact-grid">
+                <div>
+                    <form action="https://formspree.io/f/xgopddan" method="POST">
+                        <div class="form-group">
+                            <label for="name">이름 / 회사명 *</label>
+                            <input type="text" id="name" name="name" placeholder="홍길동 / (주)회사명" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">이메일 *</label>
+                            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">문의 유형</label>
+                            <select id="subject" name="subject">
+                                <option value="">선택해 주세요</option>
+                                <option value="광고 문의">광고 문의</option>
+                                <option value="콘텐츠 협업">콘텐츠 협업</option>
+                                <option value="사이트 오류 제보">사이트 오류 제보</option>
+                                <option value="개인정보 관련">개인정보 관련</option>
+                                <option value="기타">기타</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">문의 내용 *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="문의 내용을 자세히 적어주세요." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">문의 보내기</button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="sidebar-card">
+                        <h3>문의 전 확인사항</h3>
+                        <ul class="sidebar-list">
+                            <li>답변은 영업일 기준 1~3일 소요</li>
+                            <li>스팸성 문의는 답변 드리지 않습니다</li>
+                            <li>로또 당첨 번호 예측 문의는 불가합니다</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-card" style="margin-top:16px">
+                        <h3>자주 묻는 질문</h3>
+                        <ul class="sidebar-list">
+                            <li><strong>광고 게재 가능한가요?</strong><br>
+                                <span style="font-size:0.88em;color:var(--text-muted)">네, 문의 양식으로 연락주세요.</span></li>
+                            <li><strong>콘텐츠 기고가 가능한가요?</strong><br>
+                                <span style="font-size:0.88em;color:var(--text-muted)">로또·확률 관련 전문 콘텐츠는 검토 후 게재 가능합니다.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="about.html">소개</a>
+                <a href="privacy.html">개인정보처리방침</a>
+                <a href="contact.html">제휴 문의</a>
+            </div>
+            <p>© 2025 로또인사이트. 본 사이트는 정보 제공 목적으로 운영되며, 사행행위를 조장하지 않습니다.</p>
+        </div>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
