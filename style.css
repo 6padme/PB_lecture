@@ -109,3 +109,15 @@ h1 {
     background-color: #45a049;
     box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
+
+.contact-link {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
