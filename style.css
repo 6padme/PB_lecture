@@ -121,3 +121,14 @@ h1 {
 .contact-link:hover {
     text-decoration: underline;
 }
+
+.disqus-wrapper {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+[data-theme="dark"] .disqus-wrapper {
+    border-top-color: #444;
+}
