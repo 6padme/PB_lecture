@@ -154,7 +154,7 @@
                     </ul>
                     <p>검증:</p>
                     <ul>
-                        <li>✅ 홀짝 비율: 홀수 4개(15·27·43·?), 짝수 2개(8·16) → 조정 필요 시 34→33(홀) 대체</li>
+                        <li>✅ 홀짝 비율: 홀수 3개(15·27·43), 짝수 3개(8·16·34) → 홀짝 3:3 조합 ✅</li>
                         <li>✅ 구간 분산: 5개 구간 모두 포함</li>
                         <li>✅ 합계: 8+15+16+27+34+43 = 143 → 100~180 범위 내 ✅</li>
                         <li>✅ 연속 번호: 15, 16 포함 ✅</li>
@@ -184,10 +184,17 @@
                         <li><a href="lotto-auto-vs-manual.html">자동 vs 수동 비교</a></li>
                         <li><a href="lotto-statistics.html">번호별 출현 빈도 분석</a></li>
                         <li><a href="lotto-probability.html">당첨 확률 이해하기</a></li>
+                        <li><a href="lotto-dream-numbers.html">로또 번호 꿈 해몽 가이드</a></li>
+                        <li><a href="lotto-jackpot-history.html">역대 최고 당첨금 이야기</a></li>
                         <li><a href="../index.html">로또 번호 생성기</a></li>
                     </ul>
                 </div>
             </aside>
+        </div>
+    </div>
+        <h2 class="section-title">댓글</h2>
+        <div class="disqus-section">
+            <div id="disqus_thread"></div>
         </div>
     </div>
 
@@ -201,6 +208,19 @@
             <p>© 2025 로또인사이트. 본 사이트는 정보 제공 목적으로 운영되며, 사행행위를 조장하지 않습니다.</p>
         </div>
     </footer>
+    <script>
+        var disqus_config = function () {
+            this.page.url = 'https://6padme.github.io/PB_lecture/articles/lotto-strategies.html';
+            this.page.identifier = 'lotto-strategies';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://pb-lacture.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>댓글을 보려면 JavaScript를 활성화해 주세요. <a href="https://disqus.com/?ref_noscript">Disqus 제공</a></noscript>
     <script src="../main.js"></script>
 </body>
 </html>
