@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /ads.txt
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://6padme.github.io/PB_lecture/sitemap.xml
