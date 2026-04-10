@@ -447,6 +447,47 @@ footer {
 .breadcrumb a { color: var(--text-muted); }
 .breadcrumb a:hover { color: var(--primary); }
 
+/* ===== FAQ Section ===== */
+.faq-section { margin: 40px 0; }
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+}
+.faq-q {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.faq-q::before { content: "Q. "; }
+.faq-a {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin: 0;
+}
+.faq-a::before { content: "A. "; font-weight: 600; color: var(--text-muted); }
+.article-body .faq-list { margin-top: 8px; }
+.article-body .faq-item { background: var(--bg); }
+
+/* ===== E-E-A-T: Update Badge ===== */
+.updated-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
     .hero { padding: 36px 20px; }
