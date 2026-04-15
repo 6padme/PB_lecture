@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /ads.txt
 
 User-agent: Googlebot
 Allow: /
